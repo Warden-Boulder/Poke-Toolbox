@@ -29,7 +29,7 @@ h1 {
                -0.5px 0.5px 0 #3B4CCA,
                0.5px 0.5px 0 #3B4CCA;
 }
-.introduction {
+.introduction, h2 {
    -webkit-text-stroke: 0.5px #3B4CCA;
   text-shadow: -0.5px -0.5px 0 #3B4CCA,
                0.5px -0.5px 0 #3B4CCA,
