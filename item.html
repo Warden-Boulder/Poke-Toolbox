@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css?v=12" rel="stylesheet" type="text/css" />
+    <script src="script.js?v=3" defer></script>
+    <script src="nav.js"></script>
+    <script src="music.js" defer></script>
+  </head>
+  <body>
+    <audio id="bg-music" src="music/background.mp3" loop preload="auto" style="display:none;"></audio>
+    <header>
+      <h1>Item Finder</h1>
+      <strong><em><p>PokéNav <select onchange="Nav()" id="select">
+      <option value="null">---Select---</option>
+      <option value="home">Homepage</option>
+      </select></p></em></strong>
+    </header>
+    <details>
+      <summary><h3>Pokémon Requiring Items</h3></summary>
+      <select onchange="evoitem()">
+        <option value="null">---Select---</option>
+        <option>Applin</option>
+        <option>Charcadet</option>
+        <option>Clamperl</option>
+        <option>Duraludon</option>
+        <option>Dusclops</option>
+        <option>Eevee</option>
+        <option>Electabuzz</option>
+        <option>Feebas</option>
+        <option>Gliagr</option>
+        <option>Happiny</option>
+        <option>Kubfu</option>
+        <option>Magmar</option>
+        <option>Milcery</option>
+        <option>Onix</option>
+        <option>Poliwhirl</option>
+        <option>Poltchageisy</option>
+        <option>Porygon Line</option>
+        <option>Rhydon</option>
+        <option>Scyther</option>
+        <option>Sedra</option>
+        <option>Sinistea</option>
+        <option>Slowpoke</option>
+        <option>Sneasel</option>
+        <option>Spritzee</option>
+        <option>Swirlix</option>
+        <option>Ursaring</option>
+      </select>
+    </details><br>
+    <details>
+      <summary><h3>Stat Changing Items</h3></summary>
+      <select onchange="stat()" id="stat">
+        <option value="null">---Select---</option>
+        <optgroup label="Accuracy"></optgroup>
+        <optgroup label="Attack"></optgroup>
+        <optgroup label="Defense"></optgroup>
+        <optgroup label="Evasion"></optgroup>
+        <optgroup label="HP"></optgroup>
+        <optgroup label="Luck"></optgroup>
+        <optgroup label="SpA"></optgroup>
+        <optgroup label="SpD"></optgroup>
+        <optgroup label="Speed"></optgroup>
+      </select>
+    </details><br>
+    <details>
+      <summary><h3>Type Boosting Items</h3></summary>
+      <select onchange="type()" id="type">
+        <option value="null">---Select---</option>
+        <optgroup label="Bug"></optgroup>
+        <optgroup label="Dark"></optgroup>
+        <optgroup label="Dragon"></optgroup>
+        <optgroup label="Electric"></optgroup>
+        <optgroup label="Fairy"></optgroup>
+        <optgroup label="Fighting"></optgroup>
+        <optgroup label="Fire"></optgroup>
+        <optgroup label="Flying"></optgroup>
+        <optgroup label="Ghost"></optgroup>
+        <optgroup label="Grass"></optgroup>
+        <optgroup label="Ground"></optgroup>
+        <optgroup label="Ice"></optgroup>
+        <optgroup label="Normal"></optgroup>
+        <optgroup label="Posion"></optgroup>
+        <optgroup label="Psychic"></optgroup>
+        <optgroup label="Rock"></optgroup>
+        <optgroup label="Steel"></optgroup>
+        <optgroup label="Water"></optgroup>
+      </select>
+    </details><br>
+    <details>
+      <summary><h3>Other Held Items</h3></summary>
+      <select onchange="helditem()" id="held">
+        <option value="null">---Select---</option>
+      </select>
+    </details><br>
+    <footer>
+    Pokéfan Boulder<br>
+    Alpha Version
+  </footer>
+  </body>
+</html>
