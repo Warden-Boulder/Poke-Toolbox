@@ -1,3 +1,16 @@
+.introduction, h2 {
+  -webkit-text-stroke: 0.5px #3B4CCA;
+  text-shadow: -0.5px -0.5px 0 #3B4CCA,
+               0.5px -0.5px 0 #3B4CCA,
+               -0.5px 0.5px 0 #3B4CCA,
+               0.5px 0.5px 0 #3B4CCA;
+}
+
+a {
+  color: #FFDE00;
+  text-decoration: none;
+}
+
 body {
   background-color: #1c1c1c;
   color: #FFDE00;
@@ -5,35 +18,67 @@ body {
   padding: 0;
 }
 
-header {
-  border-bottom: solid 2px;
-  margin: 7px;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
+details summary {
+  cursor: pointer;
+  display: block;
+  list-style: none;
+  padding: 4px 0;
+}
 
+details summary h3 {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+details summary::before {
+  content: '▶';
+  display: inline-block;
+  font-size: 0.7em;
+  margin-right: 8px;
+  transition: transform 0.2s;
+  vertical-align: middle;
+   -webkit-text-stroke: 0.5px #3B4CCA;
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 #3B4CCA,
+               0.5px -0.5px 0 #3B4CCA,
+               -0.5px 0.5px 0 #3B4CCA,
+               0.5px 0.5px 0 #3B4CCA;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
 }
 
 footer {
   border-top: solid 2px;
   font-style: italic;
-  text-align: center;
   padding: 10px;
+  text-align: center;
   width: 100%;
 }
 
 h1 {
+  -webkit-text-stroke: 0.5px #3B4CCA;
   text-align: center;
-   -webkit-text-stroke: 0.5px #3B4CCA;
   text-shadow: -0.5px -0.5px 0 #3B4CCA,
                0.5px -0.5px 0 #3B4CCA,
                -0.5px 0.5px 0 #3B4CCA,
                0.5px 0.5px 0 #3B4CCA;
 }
-.introduction, h2 {
-   -webkit-text-stroke: 0.5px #3B4CCA;
-  text-shadow: -0.5px -0.5px 0 #3B4CCA,
-               0.5px -0.5px 0 #3B4CCA,
-               -0.5px 0.5px 0 #3B4CCA,
-               0.5px 0.5px 0 #3B4CCA;
+
+header {
+  border-bottom: solid 2px;
+  margin: 7px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+select {
+  borders-radius: 10%;
 }
