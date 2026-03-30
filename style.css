@@ -12,7 +12,7 @@ a {
 }
 
 body {
-  background-color: #1c1c1c;
+  background-color: #e3350d;
   color: #FFDE00;
   margin: 0;
   padding: 0;
@@ -80,5 +80,5 @@ header {
 }
 
 select {
-  borders-radius: 10%;
+  borders-radius: 100%;
 }
