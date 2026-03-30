@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="style.css?v=12" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=14" rel="stylesheet" type="text/css" />
     <script src="script.js?v=3" defer></script>
     <script src="nav.js"></script>
-    <script src="music.js" defer></script>
   </head>
   <body>
-    <audio id="bg-music" src="music/background.mp3" loop preload="auto" style="display:none;"></audio>
     <header>
       <h1>Item Finder</h1>
       <strong><em><p>PokéNav <select onchange="Nav()" id="select">
@@ -53,7 +51,11 @@
       <summary><h3>Stat Changing Items</h3></summary>
       <select onchange="stat()" id="stat">
         <option value="null">---Select---</option>
-        <optgroup label="Accuracy"></optgroup>
+        <optgroup label="Accuracy">
+          <option>Miracle Brry</option>
+          <option>Wide Lens</option>
+          <option>Zoom Lens</option>
+        </optgroup>
         <optgroup label="Attack"></optgroup>
         <optgroup label="Defense"></optgroup>
         <optgroup label="Evasion"></optgroup>
