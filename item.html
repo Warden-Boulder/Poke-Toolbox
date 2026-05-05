@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="style.css?v=14" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=16" rel="stylesheet" type="text/css" />
     <script src="script.js?v=3" defer></script>
+    <scipt src="item.js"></scipt>
     <script src="nav.js"></script>
     <link href="index.html" />
   </head>
@@ -18,42 +19,49 @@
     </header>
     <details>
       <summary><h3>Pokémon Requiring Items</h3></summary>
-      <select onchange="evoitem()">
+      <select name="evolution" id="evolution" onchange="evoitem()">
         <option value="null">---Select---</option>
-        <option>Applin</option>
-        <option>Charcadet</option>
-        <option>Clamperl</option>
-        <option>Duraludon</option>
-        <option>Dusclops</option>
-        <option>Eevee</option>
-        <option>Electabuzz</option>
-        <option>Feebas</option>
-        <option>Gliagr</option>
-        <option>Happiny</option>
-        <option>Kubfu</option>
-        <option>Magmar</option>
-        <option>Milcery</option>
-        <option>Onix</option>
-        <option>Poliwhirl</option>
-        <option>Poltchageisy</option>
-        <option>Porygon Line</option>
-        <option>Rhydon</option>
-        <option>Scyther</option>
-        <option>Sedra</option>
-        <option>Sinistea</option>
-        <option>Slowpoke</option>
-        <option>Sneasel</option>
-        <option>Spritzee</option>
-        <option>Swirlix</option>
-        <option>Ursaring</option>
+        <option value="apple">Applin</option>
+        <option value="cadet">Charcadet</option>
+        <option value="charge">Charjabug</option>
+        <option value="pearl">Clamperl</option>
+        <option value="duralast">Duraludon</option>
+        <option value="dusk">Dusclops</option>
+        <option value="eve">Eevee</option>
+        <option value="buzz">Electabuzz</option>
+        <option value="beauty">Feebas</option>
+        <option value="glide">Gliagr</option>
+        <option value="gloom">Gloom</option>
+        <option value="happy">Happiny</option>
+        <option value="cub">Kubfu</option>
+        <option value="magma">Magmar</option>
+        <option value="magnet">Magneton</option>
+        <option value="milk">Milcery</option>
+        <option value="compass">Nosepass</option>
+        <option value="onyx">Onix</option>
+        <option value="poly">Poliwhirl</option>
+        <option value="poltygheist">Poltchageist</option>
+        <option value="polygon">Porygon Line</option>
+        <option value="ride">Rhydon</option>
+        <option value="scythe">Scyther</option>
+        <option value="sea">Sedra</option>
+        <option value="tea">Sinistea</option>
+        <option value="slow">Slowpoke</option>
+        <option value="sneak">Sneasel</option>
+        <option value="spritz">Spritzee</option>
+        <option value="swirl">Swirlix</option>
+        <option value="ursa">Ursaring</option>
       </select>
+      <p id="evo-info"></p>
     </details><br>
     <details>
       <summary><h3>Stat Changing Items</h3></summary>
       <select onchange="stat()" id="stat">
         <option value="null">---Select---</option>
         <optgroup label="Accuracy">
-          <option>Miracle Brry</option>
+          <option>Bright Powder</option>
+          <option>Lax Incense</option>
+          <option>Miracle Berry</option>
           <option>Wide Lens</option>
           <option>Zoom Lens</option>
         </optgroup>
@@ -64,37 +72,98 @@
         <optgroup label="Luck"></optgroup>
         <optgroup label="SpA"></optgroup>
         <optgroup label="SpD"></optgroup>
-        <optgroup label="Speed"></optgroup>
+        <optgroup label="Speed">
+          <option>Full Incense</option>
+          <option>Lagging Tail</option>
+        </optgroup>
       </select>
     </details><br>
     <details>
       <summary><h3>Type Boosting Items</h3></summary>
       <select onchange="type()" id="type">
         <option value="null">---Select---</option>
-        <optgroup label="Bug"></optgroup>
-        <optgroup label="Dark"></optgroup>
-        <optgroup label="Dragon"></optgroup>
-        <optgroup label="Electric"></optgroup>
-        <optgroup label="Fairy"></optgroup>
-        <optgroup label="Fighting"></optgroup>
-        <optgroup label="Fire"></optgroup>
-        <optgroup label="Flying"></optgroup>
-        <optgroup label="Ghost"></optgroup>
-        <optgroup label="Grass"></optgroup>
-        <optgroup label="Ground"></optgroup>
-        <optgroup label="Ice"></optgroup>
-        <optgroup label="Normal"></optgroup>
-        <optgroup label="Posion"></optgroup>
-        <optgroup label="Psychic"></optgroup>
-        <optgroup label="Rock"></optgroup>
-        <optgroup label="Steel"></optgroup>
-        <optgroup label="Water"></optgroup>
+        <optgroup label="Bug">
+          <option>Insect Plate</option>
+          <option>Silver Powder</option>
+        </optgroup>
+        <optgroup label="Dark">
+          <option>Black Glasses</option>
+          <option>Dread Plate</option>
+        </optgroup>
+        <optgroup label="Dragon">
+          <option>Draco Plate</option>
+          <option>Dragon Fang</option>
+        </optgroup>
+        <optgroup label="Electric">
+          <option>Magnet</option>
+          <option>Zap Plate</option>
+        </optgroup>
+        <optgroup label="Fairy">
+          <option>Fairy Feather</option>
+          <option>Pixie Plate</option>
+        </optgroup>
+        <optgroup label="Fighting">
+          <option>Black Belt</option>
+          <option>Fist Plate</option>
+        </optgroup>
+        <optgroup label="Fire">
+          <option>Charcole</option>
+          <option>Flame Plate</option>
+        </optgroup>
+        <optgroup label="Flying">
+          <option>Sharp Beak</option>
+          <option>Sky Plate</option>
+        </optgroup>
+        <optgroup label="Ghost">
+          <option>Spell Tag</option>
+          <option>Spooky Plate</option>
+        </optgroup>
+        <optgroup label="Grass">
+          <option>Miracle Seed</option>
+          <option>Meadow Plate</option>
+        </optgroup>
+        <optgroup label="Ground">
+          <option>Earth Plate</option>
+          <option>Soft Sand</option>
+        </optgroup>
+        <optgroup label="Ice">
+          <option>Icicle Plate</option>
+          <option>Never-Melt Ice</option>
+        </optgroup>
+        <optgroup label="Normal">
+          <option>Blank Plate</option>
+          <option>Pink Bow</option>
+          <option>Polkadot Bow</option>
+          <option>Silk Scarf</option>
+        </optgroup>
+        <optgroup label="Posion">
+          <option>Poison Barb</option>
+          <option>Toxic Plate</option>
+        </optgroup>
+        <optgroup label="Psychic">
+          <option>Mind Plate</option>
+          <option>Odd Iencense</option>
+          <option>Twisted Spoon</option>
+        </optgroup>
+        <optgroup label="Rock">
+          <option>Hard Stone</option>
+          <option>Stone Plate</option>
+        </optgroup>
+        <optgroup label="Steel">
+          <option>Iron Plate</option>
+          <option>Metal Coat</option>
+        </optgroup>
+        <optgroup label="Water">
+          <option>Mystic Water</option>
+          <option>Splash Plate</option>
+        </optgroup>
       </select>
     </details><br>
     <details>
       <summary><h3>Other Held Items</h3></summary>
       <select onchange="helditem()" id="held">
         <option value="null">---Select---</option>
+        <option>Amulet Coin</option>
       </select>
     </details><br>
     <footer>
