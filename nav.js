@@ -6,5 +6,8 @@ function Nav() {
     case 'home':
       window.location.href = 'index.html';
       break;
+    case 'bb':
+      window.location.href = 'bb.html';
+      break; 
   }
 }
