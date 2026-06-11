@@ -82,11 +82,19 @@ header {
   width: 100%;
 }
 
+.introduction, #introduction {
+  font-family: "Gill Sans", "Gill Sans M";
+  font-style: italic;
+}
+
 select {
-  borders-radius: 100%;
+  border-radius: 4px;
 }
 
 ul li {
   margin-top: -5px;
   padding-top:-5px;
+}
+tr, td, th {
+  border: 2px solid #FFDE00;
 }
